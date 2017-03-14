@@ -261,7 +261,9 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
 
     @Override
     public void onRadioConnected() {
-        findViewById(R.id.btn_play).performClick();
+        findViewById(R.id.btn_pause).performClick();
+        RadioManager.getService().play(Config.RADIO_STREAM_URL);
+       // findViewById(R.id.btn_play).performClick();
     }
 
     @Override
@@ -297,13 +299,12 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
     @Override
     protected void onResume() {
         super.onResume();
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-       // radioManager.enableNotification(true);
+        //radioManager.enableNotification(true);
     }
 
 
