@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/radio_ricardo.iml" filepath="$PROJECT_DIR$/radio_ricardo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/refactor_radio.iml" filepath="$PROJECT_DIR$/refactor_radio.iml" />
     </modules>
   </component>
 </project>
