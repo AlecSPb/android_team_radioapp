@@ -7,10 +7,26 @@
             android:icon="@drawable/ic_drawer_home"
             android:title="@string/drawer_home" />
 
+
+        <item
+            android:id="@+id/drawer_facebook"
+            android:icon="@drawable/ic_facebook"
+            android:title="@string/drawer_facebook" />
+        <item
+            android:id="@+id/drawer_twitter"
+            android:icon="@drawable/ic_twitter"
+            android:title="@string/drawer_twitter" />
+        <item
+            android:id="@+id/drawer_instagram"
+            android:icon="@drawable/ic_instagram"
+            android:title="@string/drawer_instagram" />
+
+        <!--
         <item
             android:id="@+id/drawer_social"
             android:icon="@drawable/ic_drawer_social"
             android:title="@string/drawer_social" />
+            -->
 
         <item
             android:id="@+id/drawer_about_us"

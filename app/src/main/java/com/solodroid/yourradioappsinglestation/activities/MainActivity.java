@@ -1,17 +1,10 @@
 package com.solodroid.yourradioappsinglestation.activities;
 
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.NotificationManager;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.MediaStore;
-import android.service.notification.StatusBarNotification;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -26,20 +19,17 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.solodroid.yourradioappsinglestation.Config;
 import com.solodroid.yourradioappsinglestation.R;
 import com.solodroid.yourradioappsinglestation.fragments.FragmentHome;
-import com.solodroid.yourradioappsinglestation.notification.NotificationHandler;
 import com.solodroid.yourradioappsinglestation.services.NotificationBuilder;
 import com.solodroid.yourradioappsinglestation.utilities.Callscreen;
 
-import butterknife.OnClick;
 import co.mobiwise.library.radio.RadioListener;
 import co.mobiwise.library.radio.RadioManager;
 
@@ -64,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
         setContentView(R.layout.activity_main);
 
         loadAdMobBannerAd();
-        fireBaseAnalytics();
+       // fireBaseAnalytics();
 
         radioManager = RadioManager.with(MainActivity.this);
 
@@ -101,6 +91,8 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,
                 new FragmentHome(), COLLAPSING_TOOLBAR_FRAGMENT_TAG).commit();
+
+        subscribeToPushService();
 
     }
 
@@ -144,10 +136,16 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
 
-            case R.id.drawer_social:
-                Intent social = new Intent(this, ActivitySocial.class);
-                startActivity(social);
+            case R.id.drawer_facebook:
+                Callscreen.renderURL(this, getString(R.string.facebook_url), getString(R.string.drawer_facebook));
 
+                return true;
+            case R.id.drawer_twitter:
+                Callscreen.renderURL(this, getString(R.string.twitter_url), getString(R.string.drawer_twitter));
+
+                return true;
+            case R.id.drawer_instagram:
+                Callscreen.renderURL(this, getString(R.string.instagram_url), getString(R.string.drawer_instagram));
                 return true;
 
             case R.id.drawer_rate:
@@ -343,17 +341,11 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
         }
     }
 
-    private void fireBaseAnalytics() {
-
-        Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "main_activity");
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "MainActivity");
-        NotificationHandler.getFirebaseAnalytics().logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
-        NotificationHandler.getFirebaseAnalytics().setAnalyticsCollectionEnabled(true);
-        NotificationHandler.getFirebaseAnalytics().setMinimumSessionDuration(5000);
-        NotificationHandler.getFirebaseAnalytics().setSessionTimeoutDuration(1000000);
-
+    private void subscribeToPushService() {
+        FirebaseMessaging.getInstance().subscribeToTopic("Test");
     }
+
+
 
 
 }
