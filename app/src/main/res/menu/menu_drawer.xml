@@ -16,10 +16,30 @@
             android:id="@+id/drawer_twitter"
             android:icon="@drawable/ic_twitter"
             android:title="@string/drawer_twitter" />
+
+
+        <item
+            android:id="@+id/drawer_programming"
+            android:icon="@drawable/ic_schedule"
+            android:title="@string/drawer_programming" />
+
+        <item
+            android:id="@+id/drawer_about_us"
+            android:icon="@drawable/ic_drawer_about"
+            android:title="@string/drawer_about_us" />
+
+
+        <item
+            android:id="@+id/drawer_more"
+            android:icon="@drawable/ic_contact"
+            android:title="@string/drawer_more" />
+
+        <!--
         <item
             android:id="@+id/drawer_instagram"
             android:icon="@drawable/ic_instagram"
             android:title="@string/drawer_instagram" />
+            -->
 
         <!--
         <item
@@ -28,25 +48,13 @@
             android:title="@string/drawer_social" />
             -->
 
-        <item
-            android:id="@+id/drawer_about_us"
-            android:icon="@drawable/ic_drawer_about"
-            android:title="@string/drawer_about_us" />
 
-        <item
-            android:id="@+id/drawer_programming"
-            android:icon="@drawable/ic_schedule"
-            android:title="@string/drawer_programming" />
-
-        <item
-            android:id="@+id/drawer_more"
-            android:icon="@drawable/ic_contact"
-            android:title="@string/drawer_more" />
-
+        <!--
         <item
             android:id="@+id/drawer_about"
             android:icon="@drawable/ic_drawer_about"
             android:title="@string/drawer_about" />
+            -->
 
         <item
             android:id="@+id/drawer_exit"

@@ -74,5 +74,6 @@
     <!--others-->
     <string name="drawer_open">Menú abierto</string>
     <string name="drawer_close">Menú cerrado</string>
+    <string name="who_we_are_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisi sapien, viverra et pellentesque sit amet, ultricies sit amet lorem. Cras laoreet sit amet odio et auctor. Ut quis pharetra justo. Nulla accumsan suscipit pharetra. Nam eget euismod nulla. Cras pretium lectus a massa egestas ullamcorper. Sed a justo ornare, tincidunt metus scelerisque, consectetur justo.      Nullam enim sapien, porta nec hendrerit vitae, gravida sollicitudin nisi. Suspendisse potenti. Nam auctor risus sit amet purus sollicitudin tincidunt. Aliquam erat volutpat. Sed dignissim mi sed lacus finibus bibendum. Ut sed metus commodo, molestie eros quis, cursus nunc. Integer nec pellentesque lorem, sed tempus est. Ut pharetra aliquam nibh, vel varius ipsum lobortis vitae. Praesent lacinia mattis rutrum. Sed eu cursus tortor, at tempus sapien. Fusce et est commodo, viverra tellus vitae, consectetur tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.      Nam congue diam quis nisi varius, quis faucibus est vestibulum. Mauris vel consequat tortor. Vivamus ac enim scelerisque, blandit lorem id, vestibulum f</string>
 
 </resources>

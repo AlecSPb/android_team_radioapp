@@ -144,10 +144,11 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
                 Callscreen.renderURL(this, getString(R.string.twitter_url), getString(R.string.drawer_twitter));
 
                 return true;
+            /*
             case R.id.drawer_instagram:
                 Callscreen.renderURL(this, getString(R.string.instagram_url), getString(R.string.drawer_instagram));
                 return true;
-
+*/
             case R.id.drawer_rate:
                 final String appName = getPackageName();
                 try {
@@ -161,17 +162,21 @@ public class MainActivity extends AppCompatActivity implements RadioListener, Na
                 Callscreen.renderURL(this, getString(R.string.play_more_apps), "More");  //TODO Cambiar URL por la programacion de la radio y el titulo
                 return true;
 
+            /*
             case R.id.drawer_about:
                 Intent about = new Intent(this, ActivityAbout.class);
                 startActivity(about);
                 return true;
+                */
 
-            case R.id.drawer_programming:
-                Callscreen.renderURL(this, "http://estudiosmax.com/app/estudiosmax/programacion", "Programacion");  //TODO Cambiar URL por la programacion de la radio y l titulo
-                return true;
 
             case R.id.drawer_about_us:
-                Callscreen.renderURL(this,"http://estudiosmax.com/app/estudiosmax/quienessomos", "Quienes Somos?"); //TODO Cambiar URL por la info de la radio y el titulo
+                Intent i = new Intent(this, QuienesSomosActivity.class);
+                this.startActivity(i);
+                return true;
+
+            case R.id.drawer_programming:
+                Callscreen.goScheduleActivity(this);
                 return true;
 
             case R.id.drawer_exit:

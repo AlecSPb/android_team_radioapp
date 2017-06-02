@@ -34,24 +34,23 @@
         <activity
             android:name=".activities.ActivitySocial"
             android:screenOrientation="portrait" />
+        <activity android:name=".activities.ScheduleActivity" />
 
         <!-- fcm -->
 
-        <service
-            android:name=".notification.MyFirebaseMessagingService">
+        <service android:name=".notification.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <service
-            android:name=".notification.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
-
-        <activity android:name=".activities.BaseWebviewActivity"></activity>
+        <activity android:name=".activities.BaseWebviewActivity" />
+        <activity android:name=".activities.QuienesSomosActivity"></activity>
     </application>
 
 </manifest>
