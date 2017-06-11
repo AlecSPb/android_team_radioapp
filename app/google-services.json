@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "364269992316",
-    "firebase_url": "https://genericradio-1dfd4.firebaseio.com",
-    "project_id": "genericradio-1dfd4",
-    "storage_bucket": "genericradio-1dfd4.appspot.com"
+    "project_number": "844406940184",
+    "firebase_url": "https://chat-afbe7.firebaseio.com",
+    "project_id": "chat-afbe7",
+    "storage_bucket": "chat-afbe7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:364269992316:android:bf0177430e4313e0",
+        "mobilesdk_app_id": "1:844406940184:android:bf0177430e4313e0",
         "android_client_info": {
           "package_name": "emax.demov3"
         }
       },
       "oauth_client": [
         {
-          "client_id": "364269992316-hf9lj5skedfkjvoqlp4i84o0ru4ne542.apps.googleusercontent.com",
+          "client_id": "844406940184-7i1otqjm43b5ro9uv3r76d8a3hrj80eo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBxlJrrPLqmLfBNrEHlA7m8dlstLds5wYA"
+          "current_key": "AIzaSyACUWOanJuu0CFtJ8u12LGHnRORCjb7bkE"
         }
       ],
       "services": {
