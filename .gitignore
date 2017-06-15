@@ -7,3 +7,9 @@
 /build
 /captures
 .externalNativeBuild
+/radio_ricardo/.idea
+/radio_ricardo/build/*
+/radio_ricardo/build
+/radio_ricardo/gradle
+/radio_ricardo/gradlew.bat
+/radio_ricardo/.gradle

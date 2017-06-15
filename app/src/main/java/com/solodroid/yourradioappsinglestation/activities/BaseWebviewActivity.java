@@ -97,4 +97,13 @@ public class BaseWebviewActivity extends AppCompatActivity {
         web.loadUrl(url);
     }
 
+    /* Cambio para clear cache */
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(web != null){
+            web.clearCache(true);
+        }
+    }
+
 }
